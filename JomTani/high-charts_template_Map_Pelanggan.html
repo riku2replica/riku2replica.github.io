@@ -1,0 +1,175 @@
+<!-- saved from url=(0014)about:internet -->
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=11" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="http://js.api.here.com/v3/3.0/mapsjs-core.js"
+			type="text/javascript" charset="utf-8"></script>
+	<script src="http://js.api.here.com/v3/3.0/mapsjs-service.js"
+			type="text/javascript" charset="utf-8"></script>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<!--<link rel="stylesheet" href="https://material-components.github.io/material-components-web-catalog/static/css/main.2d7009b6.css"/>-->
+	<meta name="theme-color" content="#000000">
+	<link rel="manifest" href="https://material-components.github.io/material-components-web-catalog/manifest.json">
+	<link rel="shortcut icon" href="https://material-components.github.io/material-components-web-catalog/static/media/mdc_web_48dp.png">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik:300,400,500">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700">
+	<link href="css/freelancer.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/custom.css">
+	<link rel="stylesheet" href="css/freelancer.css">
+	<link rel="stylesheet" href="css/components.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://code.highcharts.com/modules/exporting.js"></script>
+	<script src="https://code.highcharts.com/modules/export-data.js"></script>
+	<script src="https://code.highcharts.com/maps/highmaps.js"></script>
+	<script src="https://code.highcharts.com/maps/modules/exporting.js"></script>
+	<script src="https://code.highcharts.com/mapdata/countries/my/my-all.js"></script>
+    <title>Template Test</title>
+	
+</head>
+<body>
+	
+
+	<!--<form name="frmHiStock" id="frmHiStock">-->
+	<div id="container" style="height: 100%;width: 100%; margin: 0 auto"></div>
+	
+	<script type="text/javascript">
+	
+	function getUrlParameter(name) {
+    name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+    var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+    var results = regex.exec(location.search);
+    return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+	};
+	
+	var vUsr = getUrlParameter('Usr');
+	var vTitle = 'Historic and Estimated Worldwide Population Growth by Region';
+	var vSubs = 'Source: Wikipedia.org';
+	var vYTitle = 'Billions';
+	var vToolTip = ' millions';	//Default
+	var vXCat = ['1750', '1800', '1850', '1900', '1950', '1999', '2050'];
+	var vData = [{
+        name: 'Asia',
+        data: [502, 635, 809, 947, 1402, 3634, 5268]
+    }, {
+        name: 'Africa',
+        data: [106, 107, 111, 133, 221, 767, 1766]
+    }, {
+        name: 'Europe',
+        data: [163, 203, 276, 408, 547, 729, 628]
+    }, {
+        name: 'America',
+        data: [18, 31, 54, 156, 339, 818, 1201]
+    }, {
+        name: 'Oceania',
+        data: [2, 2, 2, 6, 13, 30, 46]
+    }];
+	
+	if(vUsr == 'Farid')
+	{
+	//change dataset
+	//vTitle = '';
+	//vSubs = '';
+	//vYTitle = '';
+	//vName = '';
+	//vData = [{},{}];
+	}else if( vUsr == 'Jake')
+	{
+	//change dataset
+	//vTitle = '';
+	//vSubs = '';
+	//vYTitle = '';
+	//vName = '';
+	//vData = [{},{}];
+	}else if(vUsr.length >= 1){
+	//alert('others');
+	} else {
+	    vTitle = 'Revenue over 6 Months';
+	    vSubs = 'Year 2012 - 2017';
+	    vYTitle = 'Billions';
+	    vToolTip = ' Millions';
+	    vXCat = ['Jan','Feb','March','April','May','June'];
+	    vData = [{ name: '2012', data: [14, 11, 15, 11, 13, 21] },
+            { name: '2013', data: [18, 31, 54, 16, 19, 18] },
+            { name: '2014', data: [16, 20, 27, 32, 24, 29] },
+            { name: '2015', data: [17, 19, 21, 17, 22, 27] },
+            { name: '2016', data: [22, 35, 29, 27, 34, 36] },
+            { name: '2017', data: [19, 20, 28,26, 33,28] }];
+	}
+        
+// Prepare demo data
+// Data is joined to map using value of 'hc-key' property by default.
+// See API docs for 'joinBy' for more info on linking data and map.
+var data = [
+    ['my-sa', 3760],
+    ['my-sk', 0],
+    ['my-la', 0],
+    ['my-pg', 1576],
+    ['my-kh', 15100],
+    ['my-sl', 15040],
+    ['my-ph', 1837],
+    ['my-kl', 0],
+    ['my-pj', 20129],
+    ['my-pl', 882],
+    ['my-jh', 9900],
+    ['my-pk', 4229],
+    ['my-kn', 1564],
+    ['my-me', 1805],
+    ['my-ns', 8499],
+    ['my-te', 3594],
+    ['undefined', 0]
+];
+
+// Create the chart
+Highcharts.mapChart('container', {
+    chart: {
+        map: 'countries/my/my-all'
+    },
+
+    title: {
+        text: 'Bilangan Pelanggan yang membeli Hasil Pertanian Pertubuhan Peladang(PPHP) dalam Malaysia pada Tahun 2016'
+    },
+
+    subtitle: {
+        text: 'Source map: <a href="http://code.highcharts.com/mapdata/countries/my/my-all.js">Malaysia</a>'
+    },
+
+    mapNavigation: {
+        enabled: true,
+        buttonOptions: {
+            verticalAlign: 'bottom'
+        }
+    },
+
+    colorAxis: {
+        min: 0
+    },
+
+    series: [{
+        data: data,
+        name: 'Bilangan Pengguna',
+        states: {
+            hover: {
+                color: '#BADA55'
+            }
+        },
+        dataLabels: {
+            enabled: true,
+            format: '{point.name}'
+        }
+    }, {
+        name: 'Separators',
+        type: 'mapline',
+        data: Highcharts.geojson(Highcharts.maps['countries/my/my-all'], 'mapline'),
+        color: 'silver',
+        showInLegend: false,
+        enableMouseTracking: false
+    }]
+});
+    </script>
+</body>
+</html>
