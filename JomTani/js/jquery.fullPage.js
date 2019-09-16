@@ -12,7 +12,7 @@
 		options = $.extend({
 			//navigation
 			'menu': false,
-			'anchors':['firstPage', 'secondPage','3rdPage','4thpage','lastPage'],
+			'anchors':['firstPage', 'secondPage','3rdPage','4thpage','5thPage','6thPage','lastPage'],
 			'navigation': true,
 			'navigationPosition': 'right',
 			'navigationColor': '#869791',

@@ -38,16 +38,20 @@ singleItem:true,
 $("#cast-slide").owlCarousel({
 slideSpeed : 300,
 paginationSpeed : 4000,
- items : 5,
+ items : 2,
  itemsDesktop : [1199,3],
  itemsDesktopSmall : [979,2],
  itemsDesktopSmall : [481,1],
   navigation : true,
 });
 $("#single-slide").owlCarousel({
-  slideSpeed : 300,
-  paginationSpeed : 400,
-  singleItem:true,
+    slideSpeed : 300,
+    paginationSpeed : 4000,
+    items : 1,
+    itemsDesktop : [1199,3],
+    itemsDesktopSmall : [979,2],
+    itemsDesktopSmall : [481,1],
+    navigation : true,
 });
 $("#mov-slide").owlCarousel({
 slideSpeed : 300,
@@ -59,6 +63,15 @@ paginationSpeed : 4000,
   navigation : true,
 });
 $("#new-slide").owlCarousel({
+slideSpeed : 300,
+paginationSpeed : 4000,
+ items : 3,
+ itemsDesktop : [1199,5],
+ itemsDesktopSmall : [979,6],
+ itemsDesktopSmall : [481,1],
+  pagination : false,
+});
+$("#res-slide").owlCarousel({
 slideSpeed : 300,
 paginationSpeed : 4000,
  items : 3,
@@ -180,10 +193,12 @@ a:active {
 <!--PC Menu Use///////////////////////////////////////////////////////////////////-->
 <ul id="PCmenu">
 <li data-menuanchor="TOP PAGE"><a href="#firstpage"><img src="images/JomTani_Logo.png" alt="TOP PAGE"></a></li><a style="color:white">   |   </a>
-<li data-menuanchor="intro" class="new"><a href="#secondPage">Fakta</a></li><a style="color:white"> | </a>
-<li data-menuanchor="intro" class="new"><a href="#3rdPage">Inisiatif</a></li><a style="color:white"> | </a>
-<li data-menuanchor="intro" class="new"><a href="#4thPage">Statistik</a></li><a style="color:white"> | </a>
-<li data-menuanchor="intro" class="new"><a href="#lastPage">Kesedaran</a></li><a style="color:white"> | </a>
+<li data-menuanchor="intro" class="new"><a href="#secondPage">Facts</a></li><a style="color:white"> | </a>
+<li data-menuanchor="intro" class="new"><a href="#3rdPage">Initiatives</a></li><a style="color:white"> | </a>
+<li data-menuanchor="intro" class="new"><a href="#4thPage">Statistics</a></li><a style="color:white"> | </a>
+<li data-menuanchor="intro" class="new"><a href="#5thPage">What can we do?</a></li><a style="color:white"> | </a>
+<li data-menuanchor="intro" class="new"><a href="#6thPage">Resources</a></li><a style="color:white"> | </a>
+<li data-menuanchor="intro" class="new"><a href="#lastPage">Related Articles on Community Efforts</a></li><a style="color:white"></a>
 
 </ul>
 
@@ -215,21 +230,20 @@ a:active {
 
 <div class="clear"></div>
 
-<div class="labeltxt"><div class="introtxt">Apa itu Jom Tani?</div>
+<div class="labeltxt"><div class="introtxt">What is Jom Tani?</div>
 
-Jom Tani adalah sejenis inisiatif untuk meningkatkan kesedaran orang awam terhadap isu-isu semasa yang berkenaan pada masa kini seperti 
-pemanasan global, perubahan iklim, serta faktor-faktor yang lain menyebabkan efek domino seperti kemarauan, kekurangan hujan, kebakaran hutan dan lain-lain.
-<br/>
-Selain it, Faktor ekonomi juga menyumbangkan faktor kekurangan bekalan makanan untuk populasi manusia yang bertambah serta daya upaya untuk membeli
-makanan apabila kos sara diri meningkat menyusahkan keluarga yang sederhana dan besar.
-<br/>
-Serta, Generasi muda yang mengabaikan pengetahuan asas tentang perkebunan and meluang lebih kepada peralatan digital seperti telefon mudah alih, televisyen, dan lain-lain 
-sehingga kekurang interaksi antara ahli keluarga.
-<br/>
-Oleh itu, diharapkan Jom Tani membolehkan masyarakat awam untuk memupuk kepada pengetahuan asas tentang perkebunan, serta membolehkan kekurangan kos sara diri dengan 
-menggunakan ruang kecil yang sedia merta. Selain itu, kerjasama antara keluarga ataupun masyarakat dapat mengeratkan usaha untuk membantu semula jadi dengan mengurangkan 
-pembaziran makanan dan kongsi ilmu tentang perkebunan antara satu sama lain. 
+Jom Tani is a kind of urban farming initiative to increase public awareness towards current issues such as global warming, climate change as well as other factors that has ripple effects such as drought, less rain, forest burnign and others.
 
+<br/>
+Aside from that, economy too contribute to the food supply chain disruption due to increasing human population as well as the ageing population in the agriculture sector. Not to forget the unsustainable buying power for basic neccessities of Below Middle Class income group.
+
+<br/>
+Back to basic concept, Millenials spending too much time on technologies, internet pairing with smartphones/tablets/computers/television are the most common places where time are being spent to the extends of lack of communcations between family where all families settle down on the living rooms all together and spending quality time having proper conversation and laughter face to face not through devices and emoticons or even emoji. 
+Why not making use of small spaces for your own gardening for food?
+
+<br/>
+Thus, it is hoped that Jom Tani could public awareness of urban farming of back to basic about farming, and reduce living cost through growing own vegetables without worrying much about pesticides and utilize the small spaces as a Genius solution to the Garden Dillema.
+When JomTani if done by community role, ripple effects are way greater than expected as this would not only helping the community to help the poor also, to unite community regardless of race and embrace community effort of reduce food waste and helping out each other.
 </div> 
 
 </div><!--end section1-->
@@ -239,15 +253,103 @@ pembaziran makanan dan kongsi ilmu tentang perkebunan antara satu sama lain.
 <!--/////Fact//////////////////////////////////////////////////////////////////////////////////////////-->
 
 <div class="section" id="section2">
-<div align="center" ID="facts"></div>
-
-
-<div class="clear"></div>
-
-<!--<div align="center" ID="titleimgIntro" ><img src="imgs/title/title06.gif"alt="INTRODUCTION"></div>-->
-<div class="labeltxt"><div class="introtxt">Fakta</div>
-<div><iframe src="high-charts_TanamanSingkatMasa.html" style="width:45%;height:400px" scrolling="no"></iframe></div>
-</div>
+    <div class="labeltxt"><div class="introtxt">Supporting Facts behind Jom Tani</div>
+    Are you aware of these situations?
+    <!-- <div><iframe src="high-charts_TanamanSingkatMasa.html" style="width:45%;height:400px" scrolling="no"></iframe></div> -->
+    </div>
+    
+    <div id="single-slide" align="center">
+        <div class="item">
+                <img src="https://assets.nst.com.my/images/articles/deforest_1495162861.jpg" style="width:60%;height:550px"></img>
+                <p id="movTitleTxt" align="center">Deforestration</p>
+                <p id="movCode">Did you know that effect of mass deforestration?</p>
+        </div>
+    
+        <div class="item">
+                <img src="https://vcdn-english.vnecdn.net/2019/06/29/2c-1561735437-r-1200x0-1561775-2589-7587-1561775674.png" style="width:60%;height:550px"></img>
+                <p id="movTitleTxt">Deforestration - Forest Fire , thus Haze.</p>
+                <p id="movCode">In Malaysia, this is no strange case as this was cause by the standard traditional slash and burn practice of industry especially Palm Tree Plantation for Land Renewal Process sake.<br/>The other cause for burning forest is due to the rise of temperature, this is more commonly seens in United States and Canada. <br/>However, recent news did covers that Amazon Rainforest was burned.</p>
+        </div>
+    
+        <div class="item">
+                <img src="https://cdnph.upi.com/svc/sv/upi_com/8801481626606/2016/1/0dbabf3bdb6b10c152abe2ef628c9327/Norway-standing-still-on-greenhouse-gas-emissions.jpg" style="width:60%;height:550px"></img>
+                <p id="movTitleTxt">Deforestration - Greenhouse Gas release</p>
+                <p id="movCode">During the daytime, all plants does photosynthesis. Forest are no different. <br/>According to <a href="https://www.geography.org.uk/teaching-resources/singapore-malaysia/What-are-the-environmental-impacts-of-deforestation-in-Malaysia">Geographical Association</a>, deforestation is the largest source of carbon dioxide emissions after fossil fuel burning, causing 15% of global greenhouse gas emissions. It should be noted that converting upland dipterocarp forest into palm oil plantations does not trap as much carbon for many years.</p>
+        </div>
+    
+        <div class="item">
+                <img src="images/wwf-savemalayantiger.jpg" style="width:auto;height:550px"></img>
+                <p id="movTitleTxt">Deforestration - Animals Protection</p>
+                <p id="movCode">When forest was cleared, it also clears up the are for animals including endangered species into human threats since they have lost their place to stay.</p>
+        </div>
+    
+        <div class="item">
+                <img src="images/wwf-waterresource.jpg" style="width:auto;height:550px"></img>
+                <p id="movTitleTxt">Deforestration - Water Cycle Disruption</p>
+                <p id="movCode">Water as one the most fundamental resources, it is no surprise like every year the citizens suffers from water rationing. Forest does its role of filtering water naturally before flowing down to water reservoir. Deforestration causes less groundwater flowing and affect the local climate to be drier than usual.</p>
+        </div>
+    
+        <div class="item">
+                <img src="https://assets.nst.com.my/images/articles/23ntcemo_1494143760.jpg" style="width:60%;height:550px"></img>
+                <p id="movTitleTxt">Deforestration - Landslide</p>
+                <p id="movCode">The more deforestration would allows more soil erosions as there are no tree roots to hold them in place. Especially in highland district, this poses a threat to roadways below the forest.</p>
+        </div>
+    
+        <div class="item">
+                <img src="https://cdn.japantimes.2xx.jp/wp-content/uploads/2018/10/f-malastic-a-20181028-870x580.jpg" style="width:60%;height:550px"></img>
+                <p id="movTitleTxt">Waste Pollution</p>
+                <p id="movCode">Did you know the types of waste pollution?</p>
+        </div>
+    
+        <div class="item">
+            <img src="https://media.thestar.com.my/Prod/23DEBB6A-C22F-4A0F-BB29-D4D2042C3889" style="width:60%;height:550px"></img>
+            <p id="movTitleTxt">Waste Pollution - Plastic Pollution</p>
+            <p id="movCode">Did you know that how many plastics are we adding to our household each time after shopping?<br/> Do you know that how long it takes to decompose?<br/>Earlier this year 2019, <a href="https://www.star2.com/living/2019/01/27/plastic-waste-malaysia/" style="text-decoration-color: orchid">The Star covered plastic pollution article</a> and the waste of land used for landfill purpose.</p>
+        </div>
+    
+        <div class="item">
+                <a href="https://www.star2.com/living/2019/06/18/food-waste-climate-change-connection/"><img src="https://www.star2.com/wp-content/uploads/2019/06/141827-1170x480.jpeg" style="width:60%;height:550px"></img></a>
+                <p id="movTitleTxt">Waste Pollution - Food Waste</p>
+                <p id="movCode">Food are bare necessity of human however, when we get greedy we tend to order more foods than our normal capacity. <br/>Thus, food waste without thinking of the origin of the food from raw crops and ingredients to cooked food.<br/>This is common sight among Malaysian when it comes to festival seasons.</p>
+        </div>
+    
+        <div class="item">
+                <img src="http://www.themalaysiantimes.com.my/wp-content/uploads/2017/04/burst-pipe-sungai-buloh.jpg" style="width:60%;height:550px"></img>
+                <p id="movTitleTxt">Waste Pollution - Water Waste</p>
+                <p id="movCode">Bursting pipes and excess usage of water or amount of time spending on taking bath is a serious problem in Malaysia and these are common sights seen in daily Malaysian lives.</p>
+        </div>
+    
+        <div class="item">
+                <img src="http://www.fedupusa.org/wp-content/uploads/2014/05/Economic-Cycle.png" style="width:60%;height:550px"></img>
+                <p id="movTitleTxt">Economy Issues</p>
+                <p id="movCode">Did you know the how economy affects us?</p>
+        </div>
+    
+        <div class="item">
+                <img src="http://www.dumpaday.com/wp-content/uploads/2013/01/not-sure-if-meme-coffee.jpg" style="width:60%;height:550px"></img>
+                <p id="movTitleTxt">Economy Issues - Unneccesary spendings / Increase Living Cost and Spendings</p>
+                <p id="movCode">This is common sights that is happening on day time where we're spending on comfort foods and drinks. <br/>Think about it what can a piece of RM50 means to the B40 household compared to a luxury lunch?<br/>A cup of ordinary coffee shop compared to Starbuck Coffee, which is value and which is luxury?</p>
+        </div>
+    
+        <div class="item">
+                <img src="https://sayingimages.com/wp-content/uploads/my-bank-account-broke-meme.jpg" style="width:60%;height:550px"></img>
+                <p id="movTitleTxt">Economy Issues - Lack of Funds for Emergency Times or Retirement</p>
+                <p id="movCode">Loan shark and black listed, these terms are common among Malaysians. Imagine how many cases you sees them when you flip in newspapers? <br/>Millenials are the ones usually suffers from saving funds for Emergency usage. <a href="https://www.imoney.my/articles/pidm-survey-saving-priorities-results">Link</a><br/>And there, also concern about the retirement fund is not enough to cover due to the gradual increasingly cost of living. <a href="https://www.star2.com/people/2016/11/11/saving-for-retirement-should-start-early/">Link</a></p>
+        </div>
+    
+        <div class="item">
+                <img src="https://i1.wp.com/bestlifeonline.com/wp-content/uploads/2018/04/shutterstock_1069510784.jpg?fit=500%2C375&ssl=1" style="width:60%;height:550px"></img>
+                <p id="movTitleTxt">Social Issues</p>
+                <p id="movCode">Did you know the how Social affects us?</p>
+        </div>
+    
+        <div class="item">
+                <img src="https://static1.squarespace.com/static/5a1512fef43b5510c0e1136c/5a151ccd8165f542d6ed9c87/5d42e7169e2680000167a42a/1564665780161/GettyImages-1064119036.jpg?format=1000w" style="width:60%;height:550px"></img>
+                <p id="movTitleTxt">Social Issues - Hands on Technology and Isolation</p>
+                <p id="movCode">Internet and Technology devices are part of modern needs without it, we're too into it be it we're gaming for pleasure, streaming our favourites movies through Digital or social media. <br/><a href="https://www.who.int/features/qa/gaming-disorder/en/">Last year, WHO declared Gaming Disorder as a kind of Disorder.</a><br/>Social Media addiction too are part of it.</p>
+        </div>   
+    
+    </div> <!-- End of Slide -->
 
 </div><!--end section2-->
 
@@ -261,16 +363,16 @@ pembaziran makanan dan kongsi ilmu tentang perkebunan antara satu sama lain.
 <div class="clear"></div>
 
 <!--<div align="center" ID="titleimgIntro" ><img src="imgs/title/title06.gif"alt="INTRODUCTION"></div>-->
-<div class="labeltxt"><div class="introtxt">Inisiatif</div>
-<a style="color:darkgreen">
-Efforts will be focusing on are as following : <br/>
--Good Health and Well-Being<br/>
--Work and Economic Growth<br/>
--Sustainable Cities and Communities<br/>
--Responsible Consumption and Production<br/>
--Peace and Justice Strong Intuitions<br/>
--Partnerships to achieve the Goals<br/>
-</a>
+<div class="labeltxt"><div class="introtxt">Initiatives</div>
+These initiatives are based on Sustainable Development Goals where The Theme "Innovation For Wellbeing":
+<p>※ No Poverty</p>
+<p>※ Zero Hunger</p>
+<p>※ Good Health and Well-Being</p>
+<p>※ Quality Education</p>
+<p>※ Decent Work and Economic Growth</p>
+<p>※ Industry, Innovation and Infrastructure</p>
+<p>※ Sustainable Cities and Communities</p>
+<p>※ Responsible Consumption and Production</p>
 </div>
 
 </div><!--end section3-->
@@ -284,52 +386,208 @@ Efforts will be focusing on are as following : <br/>
 <div class="clear"></div>
 
 <!--<div align="center" ID="titleimgIntro" ><img src="imgs/title/title06.gif"alt="INTRODUCTION"></div>-->
-<div class="labeltxt"><div class="introtxt">Statistik</div>
+<div class="labeltxt"><div class="introtxt">Statistics</div>
 </div>
 
-<div id="mov-slide" >
+<div id="mov-slide" margin="20%">
     <div class="item">
         <iframe src="high-charts_template_Map_Pelanggan.html" style="margin:10px;width:70%;height:400px" scrolling="no"></iframe>
-        <p id="movTitleTxt">Hasil Pertanian berakhir Tahun 2016</p><p id="movCode">Tahun 2016</p>
+        <p id="movTitleTxt">Total Farm Produce For Year 2016 <br/>Hasil Pertanian berakhir Tahun 2016</p><p id="movCode">Tahun 2016</p>
     </div>
 
     <div class="item">
         <iframe src="high-charts_TanamanSingkatMasa.html" style="margin:10px;width:70%;height:400px" scrolling="no"></iframe>
-        <p id="movTitleTxt">Kawasan Tanaman Singkat Masa Peladang and Usahawan</p><p id="movCode">Antara Tahun 2008 - 2012</p>
+        <p id="movTitleTxt">Farmers and Entreprenuer Short Term Plantation Area <br/>Kawasan Tanaman Singkat Masa Peladang and Usahawan</p><p id="movCode">Antara Tahun 2008 - 2012</p>
     </div>
 
     <div class="item">
         <iframe src="high-charts_PPHP2016.html" style="margin:10px;width:70%;height:400px" scrolling="no"></iframe>
-        <p id="movTitleTxt">Kawasan Tanah Perkebunan</p><p id="movCode">Antara Tahun 2008 - 2012</p>
+        <p id="movTitleTxt">Farming Area<br/>Kawasan Tanah Perkebunan</p><p id="movCode">Antara Tahun 2008 - 2012</p>
     </div>
 
     <div class="item">
         <iframe src="HighCharts_Pie_PPHP_PP.html" style="margin:10px;width:70%;height:400px" scrolling="no"></iframe>
-        <p id="movTitleTxt">Ratio Peladang (Pertubuhan Peladang dan Usahawan) Antara Negeri</p><p id="movCode">Tahun 2016</p>
+        <p id="movTitleTxt">Interstates Farmers and Entreprenuer Ratio <br/>Ratio Peladang (Pertubuhan Peladang dan Usahawan) Antara Negeri</p><p id="movCode">Tahun 2016</p>
     </div>
 
     <div class="item">
         <iframe src="HighCharts_Pie_PPHP_Pengeluar.html" style="margin:10px;width:70%;height:400px" scrolling="no"></iframe>
-        <p id="movTitleTxt">Ratio Pengeluar Antara Negeri</p><p id="movCode">Tahun 2016</p>
+        <p id="movTitleTxt">Interstates Farm Good Distributors Ratio<br/>Ratio Pengeluar Antara Negeri</p><p id="movCode">Tahun 2016</p>
     </div>
 
     <div class="item">
         <iframe src="HighCharts_Pie_PPHP_Pelanggan.html" style="margin:10px;width:70%;height:400px" scrolling="no"></iframe>
-        <p id="movTitleTxt">Ratio Pelanggan Antara Negeri</p><p id="movCode">Tahun 2016</p>
+        <p id="movTitleTxt">InterStates Customers Ratios Compared <br/>Ratio Pelanggan Antara Negeri</p><p id="movCode">Tahun 2016</p>
+    </div>
+
+    <div class="item">
+        <iframe width="80%" height="400" src="http://earthenginepartners.appspot.com/science-2013-global-forest?hl=en&llbox=9.71%2C-0.39%2C113.02%2C95.82&t=ROADMAP&layers=layer0%2Clayer1%2C14%2Clayer9%2C6%2Clayer12&embedded=true" style="border: 1px solid #ccc"></iframe>
+        <p id="movTitleTxt">Global Forest Change</p><p id="movCode">Source : <a href="http://earthenginepartners.appspot.com/science-2013-global-forest">Source : Science Mag</a></p>
+    </div>
+
+    <div class="item">
+        <img width="80%" height="400" src="https://www.researchgate.net/profile/Sasitharan_Nagapan/publication/258224407/figure/tbl1/AS:667594965151746@1536178451648/Landfills-in-Malaysia.png" style="border: 1px solid #ccc"></iframe>
+        <p id="movTitleTxt">Malaysia LandFills</p><p id="movCode">Source : <a href="https://www.researchgate.net/figure/Landfills-in-Malaysia_tbl1_258224407">Source : Research Gate</a></p>
     </div>
 </div>
 
 </div>
 
+<!--//// Can We Do? /////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<div class="section" id="section5">
+    <div align="center" ID="canwedo"></div>
+    <div class="clear"></div>
+
+    <div class="labeltxt"><div class="introtxt">What can we do & How does it contribute?</div>
+    </div>
+
+    <div id="cast-slide">
+        <div class="item">
+            <img src="https://thinkcity.com.my/wp/wp-content/uploads/2018/09/Building-the-Dignity-Kitchen-garden.-Image-by-Kester-Low-640x427.jpg" align="center"  style="width:80%;height:450px" scrolling="no"></iframe>
+            <p id="movTitleTxt">Knowledge Sharing</p>
+            <p id="movCode">Promote Knowledge Sharing among Family and Community. <br/>Photo by Kester Low</p>
+        </div>
+
+        <div class="item">
+            <iframe src="https://www.penerangan.gov.my/images/Poster/poster%20kaum%20malaysia%202.pdf" style="width:80%;height:450px" scrolling="no" align="center" ></iframe>
+            <p id="movTitleTxt">Promote Unity</p>
+            <p id="movCode">Promote Unity among family members and even community in neighbourhood. Spend quality time and get to know your neighbourhood. <br/>Photo by <a href="https://www.penerangan.gov.my/index.php/ms/">Department of Information Malaysia</a></p>
+        </div>
+        
+        <div class="item">
+                <img src="https://cdn57.androidauthority.net/wp-content/uploads/2019/08/OnePlus-Zen-Mode-Screenshots-5-554x1200.jpg" align="center"  style="width:30%;height:30%"></img>
+                <p id="movTitleTxt">Implement Time Out</p>
+                <p id="movCode">Hands off the digital devices. Disconnect and Spend more quality time, Family bonds has no money value and every moment counts.<br/>OnePlus, a smartphone company created a <a href="https://forums.oneplus.com/threads/zen-mode-1-3-0-unlocks-more-options-of-usage-time.1101558/">Zen Mode application</a> to keep control of your smartphone.<br/>Photo By Android Authority.</p>
+        </div>
+
+        <div class="item">
+                <img src="https://www.tmone.com.my/images/heroBanner/think-tank-articles/Iot-blooms-in-malaysian-agro-sector.jpg" align="center"  style="width:60%;height:30%"></img>
+                <p id="movTitleTxt">Side Income</p>
+                <p id="movCode">Your Excess produce may be not only your source of healthy food where you knwo what have your put your efforts. Even, you could give it away to those needy ones.<br/>Photo By TM One.</p>
+        </div>
+
+        <div class="item">
+                <img src="http://goodfoodoneverytable.org/wp-content/uploads/2016/07/jen_rosenthal_meme-1024x635.jpg" align="center"  style="width:60%;height:50%"></img>
+                <p id="movTitleTxt">Zero Food Waste</p>
+                <p id="movCode">Those Fruits/Vegetable remains can be use to fertilize soils. <br/>Why not make use of them as your natural fertilizer instead of depending on pesticides feritizer. <br/>This is way more organic.</p>
+        </div>
+
+        <div class="item">
+                <img src="https://zerowastemalaysia.org/wp-content/uploads/2019/08/1-1-768x576.jpg" align="center" style="width:60%;height:80%"></img>
+                <p id="movTitleTxt">Zero Plastics Waste</p>
+                <p id="movCode">Say "No" to plastics products such as Plastics Bag, Plastics Cups, and also Straws. <br/>Those products takes years to decompose, instead why not bring your own bottle.<br/>Visit Day Market or Night Market with your own bag, and insist on No Plastic Bag. <br/> Even you could try to buy grain, vegetables at those stores with your own container. There are stores that allows your own container to purchase groceries.</p>
+        </div>
+
+        <div class="item">
+                <img src="https://www.budgetdumpster.com/blog/wp-content/uploads/2018/03/how-to-reuse-water-2.jpg" align="center" style="width:60%;height:350px"></img>
+                <p id="movTitleTxt">Re-use your water</p>
+                <p id="movCode">Stop Pouring away the water that you used to wash or rise the grains fruits, and vegetables, re-use those waters for your garden/urban farming. <br/>Collect rain water is another alternative to reduce the cost on your water bills. However, be wary of mosquitos breeding.</p>
+        </div>
+
+        <div class="item">
+                <img src="https://organicgrowersschool.org/wp-content/uploads/2019/07/container-plants.jpg" align="center" style="width:60%;height:350px"></img>
+                <p id="movTitleTxt">Utilize your small spaces</p>
+                <p id="movCode">Unleash your creativity! The Genius Solution to Garden Dilemma in urban farming is space but what if you maximize your small spaces. <br/>Be it your own bath tubs, old vase, used plastic bottles, old pvc pipes, when these items are being creatively used they can be very useful.</p>
+        </div>
+
+        <div class="item">
+                <img src="https://www.calrecycle.ca.gov/images/cr/nav-images/compostfood.jpg" align="center"  style="width:60%;height:350px"></img>
+                <p id="movTitleTxt">Maximize the food waste</p>
+                <p id="movCode">Organic Food Waste are readily recyclable into soil amendments like compost, into mulch and liquid fertilizers, and also into biofuel, a renewable natural gas.</p>
+        </div>
+
+        <div class="item">
+                <img src="https://www.star2.com/wp-content/uploads/2017/07/str2_isjerome_MAINPIC.jpg" align="center"  style="width:60%;height:350px"></img>
+                <p id="movTitleTxt">Promote IOT Integration(Internet Of Things)</p>
+                <p id="movCode">Technology has its role, to help with our lives when it is being utilize well. It could even help with tracking the growth.</p>
+        </div>
+    </div>
+
+
+</div>
+
+<!--//// Resources /////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<div class="section" id="section6">
+    <div align="center" ID="resources"></div>
+    <div class="clear"></div>
+
+    <!--<div align="center" ID="titleimgIntro" ><img src="imgs/title/title06.gif"alt="INTRODUCTION"></div>-->
+    <div class="labeltxt"><div class="introtxt">Resource</div>
+    </div>
+
+    <div id="res-slide" >
+        <div class="item">
+            <iframe src="https://www.google.com/maps/d/embed?mid=1daHC-0MbRg4keptWZn1TCtA82ypmqwWL" style="width:80%;height:450px" scrolling="no" align="center" ></iframe>
+            <p id="movTitleTxt">List of Markets around Malaysia</p>
+        </div>
+
+        <div class="item">
+            <a href="http://www.data.gov.my/"><img src="http://www.data.gov.my/images/dtsa-logo.png" style="width:50%;height:50%">
+                <p id="movTitleTxt">Malaysia's Open Data Portal</p>
+            </a>
+        </div>
+
+        <div class="item">
+            <a href="https://thinkcity.com.my/"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE2LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHdpZHRoPSIzMzBweCIgaGVpZ2h0PSI2NXB4IiB2aWV3Qm94PSIwIDAgMzMwIDY1IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAzMzAgNjUiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8Zz4KCTxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik0xMDYuMTg2LDYwLjUzaC01Ljg2NlYxOS4zNzhoMTEuOTMxdjMuNjgxYzIuNDI5LTIuNTk4LDUuODMzLTQuNDY1LDExLjAyMS00LjQ2NQoJCWM5Ljk4NCwwLDE1LjQxNCw3LjE0LDE1LjQxNCwxOC4yNTRWNjAuNTNIMTMzLjRsLTIuOTUzLTAuMDA3aC0zLjYzOFYzNy4xNjFjMC02LjY5My00Ljg0OS04LjA3Ny03LjI4NC04LjA3NwoJCWMtMi40MTQsMC03LjI2NywxLjM4NC03LjI2Nyw4LjA3N3YyMy4zNjJoLTMuMzQzTDEwNi4xODYsNjAuNTN6Ii8+Cgk8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNOTQuNTUxLDYwLjUzSDgyLjYyOVYxOS40MDVoMTEuOTIyVjYwLjUzeiBNMjguNDg4LDUwLjQ5OGMtMy40MDksMC01LjY3OC0yLjAyNS01LjY3OC01LjZWMjkuMzJoMTAuNzkzCgkJVjE5LjI2NUgyMi44MTFWNy45NTVIMTAuODgzdjExLjMxaC01LjY0VjI5LjMyaDUuNjR2MTUuNzM3YzAsMTAuMzkyLDYuNDA5LDE2LjE0NiwxNi40NzEsMTYuMTQ2YzIuOTYxLDAsNC41MjEtMC42MDIsNi4xNTgtMS40MDgKCQl2LTEwLjc3QzMyLjQzOCw0OS42NzEsMzAuNjUsNTAuNDk4LDI4LjQ4OCw1MC40OTgiLz4KCTxwb2x5Z29uIGZpbGw9IiNGRkZGRkYiIHBvaW50cz0iMTY5LjQ5Niw2MC40OTEgMTU5LjIyMiw0NC41MjcgMTU2LjM2Myw0Ny42NTUgMTU2LjM2Myw2MC40OTEgMTQ0LjQyOCw2MC40OTEgMTQ0LjQyOCwzLjc5NyAKCQkxNTYuMzYzLDMuNzk3IDE1Ni4zNjMsMzIuNzUgMTY4LjQ2NSwxOS40NDkgMTgxLjg1NCwxOS40NDkgMTY3LjYzOSwzNS4zMTggMTgzLjg1NCw2MC40OTEgCSIvPgoJPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTM4LjUyNSw2MC40OTFWMy45NjloMTEuOTE3djE4Ljk1YzIuNDM4LTIuNTk5LDUuODQ0LTQuNDY1LDExLjAzOC00LjQ2NQoJCWM5Ljk3MywwLDE1LjQxMiw3LjEzNiwxNS40MTIsMTguMjU1djIzLjc4Mkw2NS4wMSw2MC40OFYzNy4wMjNjMC02LjcwMS00Ljg0OC04LjA4Ny03LjI3Ny04LjA4N2MtMi40MjQsMC03LjI2OCwxLjM4Ni03LjI2OCw4LjA4NwoJCVY2MC40OEwzOC41MjUsNjAuNDkxeiIvPgoJPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTIxOC45MDcsMjUuMDAxbC02LjY0Niw3LjY5NWMtMS44MzktMi4zNDYtNC41NjgtNC4zNDYtOC40MTYtNC4zNDZjLTYuNTMzLDAtMTAuNTk5LDQuNzkyLTEwLjU5OSwxMS41NTIKCQljMCw2Ljc1NCw0LjA2MywxMS41OTcsMTAuNTk5LDExLjU5N2MzLjg0OCwwLDYuNTc3LTIuMDA1LDguNDE2LTQuMzQ5bDYuNTg2LDcuNzA1Yy00LjE4Myw0LjYzMS04Ljk3OSw2LjMwMS0xNS4wMDIsNi4zMDEKCQljLTEyLjUwNSwwLTIxLjM4LTkuMTQ2LTIxLjM4LTIxLjI1NGMwLTEyLjExMSw4Ljg3NS0yMS4yMDgsMjEuMzgtMjEuMjA4QzIxMC41MzMsMTguNjk2LDIxNC44MzMsMjAuNzU4LDIxOC45MDcsMjUuMDAxIi8+Cgk8cmVjdCB4PSIyMjIuMDk2IiB5PSIxOS40MjEiIGZpbGw9IiNGRkZGRkYiIHdpZHRoPSIxMC41OTYiIGhlaWdodD0iNDEuMDEzIi8+Cgk8cG9seWdvbiBmaWxsPSIjRkZGRkZGIiBwb2ludHM9IjI3MS40MDIsMjguNzQzIDI1OS4zNjQsMjguNzQzIDI1OS4zNjQsNjAuNDM0IDI0OC43NjYsNjAuNDM0IDI0OC43NjYsMjguNzQzIDIzNi4yNjYsMjguNzQzIAoJCTIzNi4yNjYsMTkuNDIxIDI2NS45NDEsMTkuNDIxIAkiLz4KCTxwb2x5Z29uIGZpbGw9IiNGRkZGRkYiIHBvaW50cz0iMjk1LjY2Myw0NC4wODcgMjk1LjY2Myw2MC40MzQgMjg1LjA1OSw2MC40MzQgMjg1LjA1OSw0NC4yNTYgMjcwLjIxNiwxOS40MjEgMjgyLjU0NCwxOS40MjEgCgkJMjkwLjMwNywzMy41OTMgMjk4LjA1OSwxOS40MjEgMzEwLjM5NCwxOS40MjEgCSIvPgoJPHJlY3QgeD0iODIuNTk4IiB5PSIzLjk4MiIgZmlsbD0iI0ZGRkZGRiIgd2lkdGg9IjExLjYwNSIgaGVpZ2h0PSIxMS42MDIiLz4KPC9nPgo8L3N2Zz4K">
+            <p id="movTitleTxt">Think City</p>
+            </a>
+        </div>
+
+        <div class="item">
+            <a href="https://www.facebook.com/nudezerowaste/"><img src="https://scontent.fkul16-1.fna.fbcdn.net/v/t1.0-1/p200x200/38789928_2163373920548377_5533949212095414272_n.png?_nc_cat=101&_nc_oc=AQlNKrykUiXFgajsN305nWS3amc_xs5vGCoui-UweGrD5nIlKzi-Glyhv8QJLe0r_y2xKPObA8ZY5haBHjZCcQ0X&_nc_ht=scontent.fkul16-1.fna&oh=bfba3d7c5274424d2de454e401be4d97&oe=5E3A1DE3">
+            <p id="movTitleTxt">Nude the ZERO WASTE Store</p>
+            </a>
+        </div>
+
+        <div class="item">
+            <a href="https://zerowastemalaysia.org/"><img src="https://zerowastemalaysia.org/wp-content/uploads/2019/02/logo.png">
+            <p id="movTitleTxt">Zero Waste Malaysia</p>
+            </a>
+        </div>
+
+        <div class="item">
+            <a href="http://www.zerowastesg.com/"><img src="http://www.zerowastesg.com/wp-content/uploads/2013/10/ZWS-new-logo-21-Oct-2013.gif">
+            <p id="movTitleTxt">Zero Waste SG</p>
+            </a>
+        </div>
+
+        <div class="item">
+            <a href="http://www.onecoolearth.org/"><img src="http://www.onecoolearth.org/uploads/6/3/1/4/63140405/published/153859848954021529.png">
+            <p id="movTitleTxt">One Cool Earth</p>
+            </a>
+        </div>
+
+        <div class="item">
+            <a href="https://www.worldwildlife.org/"><img src="https://www.worldwildlife.org/assets/structure/unique/logo-footer-0d1f0e33577a0ac8d3eed2f9dcf2f97b376aa288e4e73f6997c3c5d22e3e4ebc.png"></img>
+                <p id="movTitleTxt">World Wildlife Fund</p>
+            </a>
+        </div>
+        
+        <div class="item">
+            <a href="https://www.calrecycle.ca.gov/"><img src="https://www.calrecycle.ca.gov/st5/Images/CalRecycleHeaderExtraLarge.png">
+                <p id="movTitleTxt">California Department of Resources Recycling and Recovery (CalRecycle)</p>
+            </a>
+        </div>
+
+        <div class="item">
+                <div style="background-color: #0cb">
+                <a href="https://www.researchgate.net/">
+                <p id="movTitleTxt">Research Gate</p>
+                </a>
+                </div>
+        </div>
+    </div>
+
+</div>
 
 <!--//// Kesedaran /////////////////////////////////////////////////////////////////////////////////////////////////////-->
-<div class="section" id="section5">
+<div class="section" id="section7">
   <div align="center" ID="awareness"></div>
 
   <div class="clear"></div>
 
   <!--<div align="center" ID="titleimgIntro" ><img src="imgs/title/title06.gif"alt="INTRODUCTION"></div>-->
-  <div class="labeltxt"><div class="introtxt">Kesedaran Masyarakat yang diusaha sekarang</div>
+  <div class="labeltxt"><div class="introtxt">Current Awareness Efforts - Media</div>
   </div>
 
   <div id="new-slide" >
@@ -358,6 +616,11 @@ Efforts will be focusing on are as following : <br/>
       <div class="item">
             <a href="https://people.utm.my/wnurul/sungai-bunus-urban-farm-a-community-project-to-rejuvenate-sungai-bunus-riverbank/"><img src="https://people.utm.my/wnurul/files/2019/02/WhatsApp-Image-2019-01-17-at-2.12.08-PM.jpeg" alt="Local Farmers, Local Food: A Gathering of Passionate Natural Farming Advocates in Malaysia" style="width:500px;height:300px"></a><p id="movTitleTxt">Sungai Bunus Urban Farm : A Community Project to Rejuvenate Sungai Bunus Riverbank</p><p id="movCode">Publication Date : Not Mentioned</p><p id="movDate">Source : UTM</p>
         </div>
+        <div class="item">
+            <a href="https://www.thestar.com.my/news/nation/2019/05/20/food-not-going-to-waste"><iframe src="http://cdn.jwplayer.com/players/fPmx28R5-d74adXtC.html" width="480" height="270" frameborder="0" scrolling="auto"></iframe>
+            <p id="movTitleTxt">Food not going to waste </p><p id="movCode">Publication Date : 20 May 2019</p><p id="movDate">Source : The Star</p>
+        </a>
+        </div>
   </div>
 
   <div id="footer">   
@@ -376,10 +639,11 @@ Efforts will be focusing on are as following : <br/>
 
     <ul id="menu">
             <li><a href="#top">Top Page</a></li>
-            <li><a href="#facts">Fakta</a></li>
-            <li><a href="#inits">Inisiatif</a></li>           
-            <li><a href="#stats">Statistik</a></li>
-            <li><a href="#awareness">Kesedaran</a></li>
+            <li><a href="#facts">Facts</a></li>
+            <li><a href="#inits">Initiatives</a></li>           
+            <li><a href="#stats">Statistics</a></li>
+            <li><a href="#resources">What can We Do</a></li>
+            <li><a href="#awareness">Awareness</a></li>
     </ul> <!--end mobMenu-->
     <script>
        $('#menu').slicknav({
