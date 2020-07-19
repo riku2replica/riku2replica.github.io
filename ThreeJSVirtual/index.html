@@ -44,14 +44,14 @@
             }
             #view{
                 position: absolute;
-                background: #fff;
+                background: transparent;
                 padding: 20px;
                 top: 20px;
                 right: 20px;
                 width: 200px;
                 font: normal 12px/18px Monospace, Arial, Helvetical, sans-serif;
                 text-align: left;
-                border: 3px double #ddd;
+                border: 1px double #ddd;
             }
             #log{
                 position: absolute;
@@ -69,7 +69,7 @@
     <body>
         <h1>A panoramic experiment with Three.JS</h1>
         <div id="demo">
-	    <div id="view"><input type="button" value="Square"><br/><input type="button" value="Wide"></div>
+	    <div id="view"><img src="https://github.com/google/material-design-icons/blob/master/image/1x_web/ic_crop_square_black_18dp.png" style="width:20px; height:20px" title="Square"><br/><img src="https://github.com/google/material-design-icons/blob/master/image/1x_web/ic_crop_16_9_black_18dp.png" style="width:20px; height:20px" title="Wide"></div>
             <div id="log"></div>
         </div>        
 
