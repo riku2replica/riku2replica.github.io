@@ -1,3 +1,8 @@
+/*
+Original Author
+Copyright (c) 2014 Norik Davtian
+URL : https://github.com/NorikDavtian/ThreeJS-360-Panorama/blob/master/LICENSE
+*/
 "use strict";
 var camera,
         scene,
