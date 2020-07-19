@@ -82,14 +82,20 @@ URL : https://github.com/NorikDavtian/ThreeJS-360-Panorama/blob/master/LICENSE
 	 function dispSquare()
 	 {
 	    //alert("Square");
-	    chgToSq();
+        //chgToSq();
+        $( "#demo" ).width(1024);
+        $( "#demo" ).height(650);
+        chgRes(1024,650);
 	 }
 
 	 function dispWide()
 	 {
 	    //alert("Wide");
 	    //mainCall();
-	    chgToWide();
+        //chgToWide();
+        $( "#demo" ).width(1280);
+        $( "#demo" ).height(720);
+        chgRes(1280,720);
 	 }
 	</script>
         <h1>A panoramic experiment with Three.JS</h1>

@@ -137,5 +137,13 @@ function chgToWide()
     });
     */
    renderer.setSize(width, height);
+   camera.projectionMatrix.makePerspective(fov, ratio, 1, 1100);
+}
+function chgRes(iWidth, iHeight)
+{
+    width = iWidth;
+    height = iHeight;
+    ratio = width / height;
+    renderer.setSize(width, height);
     camera.projectionMatrix.makePerspective(fov, ratio, 1, 1100);
 }
