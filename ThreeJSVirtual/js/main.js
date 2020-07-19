@@ -116,18 +116,26 @@ function chgToSq()
     width = 1024, // int || window.innerWidth
     height = 768, // int || window.innerHeight
     ratio = width / height;
+    /*
     texture = THREE.ImageUtils.loadTexture('img/TestImg.JPG', new THREE.UVMapping(), function() {
         init();
         animate();
     });
+    */
+   renderer.setSize(width, height);
+   camera.projectionMatrix.makePerspective(fov, ratio, 1, 1100);
 }
 function chgToWide()
 {
     width = 1280, // int || window.innerWidth
     height = 720, // int || window.innerHeight
     ratio = width / height;
+    /*
     texture = THREE.ImageUtils.loadTexture('img/TestImg.JPG', new THREE.UVMapping(), function() {
         init();
         animate();
     });
+    */
+   renderer.setSize(width, height);
+    camera.projectionMatrix.makePerspective(fov, ratio, 1, 1100);
 }
