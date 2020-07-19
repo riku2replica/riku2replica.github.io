@@ -108,13 +108,17 @@ function mainCall()
 }
 function chgToSq()
 {
-        width = 1024, // int || window.innerWidth
-        height = 768, // int || window.innerHeight
-        ratio = width / height;
+    width = 1024, // int || window.innerWidth
+    height = 768, // int || window.innerHeight
+    ratio = width / height;
+    init();
+    animate();
 }
 function chgToWide()
 {
-        width = 1280, // int || window.innerWidth
-        height = 720, // int || window.innerHeight
-        ratio = width / height;
+    width = 1280, // int || window.innerWidth
+    height = 720, // int || window.innerHeight
+    ratio = width / height;
+    init();
+    animate();
 }
