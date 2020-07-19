@@ -22,8 +22,8 @@ var camera,
         onMouseDownMouseY = 0,
         onMouseDownLon = 0,
         onMouseDownLat = 0,
-        width = 1024, // int || window.innerWidth
-        height = 768, // int || window.innerHeight
+        width = 1024, // int || window.innerWidth || default 4:3
+        height = 768, // int || window.innerHeight || default 4:3
         ratio = width / height;
 var texture = THREE.ImageUtils.loadTexture('img/TestImg.JPG', new THREE.UVMapping(), function() {
     init();
@@ -116,14 +116,18 @@ function chgToSq()
     width = 1024, // int || window.innerWidth
     height = 768, // int || window.innerHeight
     ratio = width / height;
-    init();
-    animate();
+    texture = THREE.ImageUtils.loadTexture('img/TestImg.JPG', new THREE.UVMapping(), function() {
+        init();
+        animate();
+    });
 }
 function chgToWide()
 {
     width = 1280, // int || window.innerWidth
     height = 720, // int || window.innerHeight
     ratio = width / height;
-    init();
-    animate();
+    texture = THREE.ImageUtils.loadTexture('img/TestImg.JPG', new THREE.UVMapping(), function() {
+        init();
+        animate();
+    });
 }
