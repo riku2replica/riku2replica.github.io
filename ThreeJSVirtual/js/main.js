@@ -20,7 +20,7 @@ var camera,
         width = 1440, // int || window.innerWidth
         height = 650, // int || window.innerHeight
         ratio = width / height;
-var texture = THREE.ImageUtils.loadTexture('img/TestImg.jpg', new THREE.UVMapping(), function() {
+var texture = THREE.ImageUtils.loadTexture('img/TestImg.JPG', new THREE.UVMapping(), function() {
     init();
     animate();
 });
