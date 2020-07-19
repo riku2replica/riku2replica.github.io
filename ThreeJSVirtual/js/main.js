@@ -17,8 +17,8 @@ var camera,
         onMouseDownMouseY = 0,
         onMouseDownLon = 0,
         onMouseDownLat = 0,
-        width = 768, // int || window.innerWidth
-        height = 650, // int || window.innerHeight
+        width = 1024, // int || window.innerWidth
+        height = 768, // int || window.innerHeight
         ratio = width / height;
 var texture = THREE.ImageUtils.loadTexture('img/TestImg.JPG', new THREE.UVMapping(), function() {
     init();
@@ -101,4 +101,20 @@ function render() {
     document.getElementById('log').innerHTML = log;
     camera.lookAt(scene.position);
     renderer.render(scene, camera);
+}
+function mainCall()
+{
+    alert("Main");
+}
+function chgToSq()
+{
+        width = 1024, // int || window.innerWidth
+        height = 768, // int || window.innerHeight
+        ratio = width / height;
+}
+function chgToWide()
+{
+        width = 1280, // int || window.innerWidth
+        height = 720, // int || window.innerHeight
+        ratio = width / height;
 }

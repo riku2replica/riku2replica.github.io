@@ -44,14 +44,15 @@
             }
             #view{
                 position: absolute;
-                background: transparent;
+                background: #fff;
                 padding: 20px;
                 top: 20px;
                 right: 20px;
-                width: 200px;
+                width: 60px;
                 font: normal 12px/18px Monospace, Arial, Helvetical, sans-serif;
                 text-align: left;
                 border: 1px double #ddd;
+                z-index: 999;
             }
             #log{
                 position: absolute;
@@ -67,9 +68,23 @@
         </style>
     </head>
     <body>
+	<script type="text/javascript">
+	 function dispSquare()
+	 {
+	    //alert("Square");
+	    chgToSq();
+	 }
+
+	 function dispWide()
+	 {
+	    //alert("Wide");
+	    //mainCall();
+	    chgToWide();
+	 }
+	</script>
         <h1>A panoramic experiment with Three.JS</h1>
         <div id="demo">
-	    <div id="view"><img src="img/ic_crop_square_black_18dp.png" style="width:20px; height:20px" title="Square"><br/><img src="img/ic_crop_16_9_black_18dp.png" style="width:20px; height:20px" title="Wide"></div>
+	    <div id="view"><input type="image" src="img/ic_crop_square_black_18dp.png" style="width:20px; height:20px" alt="Square" onclick="dispSquare()"> <input type="image" src="img/ic_crop_16_9_black_18dp.png" style="width:20px; height:20px" alt="Wide" onclick="dispWide()"></div>
             <div id="log"></div>
         </div>        
 
