@@ -95,14 +95,41 @@ URL : https://github.com/NorikDavtian/ThreeJS-360-Panorama/blob/master/LICENSE
         //chgToWide();
         $( "#demo" ).width(1280);
         $( "#demo" ).height(720);
-        chgRes(1280,720);
-	 }
+        chgRes(1280,720); 
+    }
+    var items = new vis.DataSet();
+    var customDate = new Date();
+    var options = {
+        start: new Date(Date.now() - 1000 * 60 * 60 * 24),
+        end: new Date(Date.now() + 1000 * 60 * 60 * 24 * 6)
+    };
+
+    var container = document.getElementById('visualization');
+    var timeline = new vis.Timeline(container, items, options);
+    var id = "id";
+    timeline.addCustomTime(new Date(customDate.getFullYear(), customDate.getMonth(), customDate.getDate() + 3), id);
+    timeline.setCustomTimeMarker('Patching up', id, true);
+    timeline.on("markerchange", function (properties) {
+        logEvent("markerchange", properties);
+    });
+    timeline.on("markerchanged", function (properties) {
+        logEvent("markerchanged", properties);
+    });
+
+    function logEvent (event, properties) {
+        var log = document.getElementById('log');
+        var msg = document.createElement('div');
+        msg.innerHTML = 'event=' + event + ', ' + 'properties=' + JSON.stringify(properties);
+        log.firstChild ? log.insertBefore(msg, log.firstChild) : log.appendChild(msg);
+    }
 	</script>
         <h1>A panoramic experiment with Three.JS</h1>
         <div id="demo">
 	    <div id="view"><input type="image" src="img/ic_crop_square_black_18dp.png" style="width:20px; height:20px" alt="Square" onclick="dispSquare()"><input type="image" src="img/ic_crop_16_9_black_18dp.png" style="width:20px; height:20px" alt="Wide" onclick="dispWide()"></div>
             <div id="log"></div>
         </div>        
+        <div id="visualization"></div><br>
+        <div id="log"></div>
 
         <script src="libs/three.min.js"></script>        
         <script src="js/main.js"></script>        
