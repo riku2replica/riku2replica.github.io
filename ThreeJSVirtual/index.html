@@ -76,6 +76,8 @@ URL : https://github.com/NorikDavtian/ThreeJS-360-Panorama/blob/master/LICENSE
         <script language="JavaScript" src="js/owl.carousel.js" type="text/javascript"></script>
         <script language="JavaScript" src="js/jquery.slimscroll.min.js" type="text/javascript"></script>
         <script language="JavaScript" src="js/jquery.slicknav.min.js" type="text/javascript"></script>
+        <script src="js/vis-timeline-graph2d.min.js"></script>
+        <link href="css/vis-timeline-graph2d.min.css" rel="stylesheet" type="text/css" />
     </head>
     <body>
 	<script type="text/javascript">
@@ -117,7 +119,7 @@ URL : https://github.com/NorikDavtian/ThreeJS-360-Panorama/blob/master/LICENSE
     });
 
     function logEvent (event, properties) {
-        var log = document.getElementById('log');
+        var log = document.getElementById('vlog');
         var msg = document.createElement('div');
         msg.innerHTML = 'event=' + event + ', ' + 'properties=' + JSON.stringify(properties);
         log.firstChild ? log.insertBefore(msg, log.firstChild) : log.appendChild(msg);
@@ -127,9 +129,10 @@ URL : https://github.com/NorikDavtian/ThreeJS-360-Panorama/blob/master/LICENSE
         <div id="demo">
 	    <div id="view"><input type="image" src="img/ic_crop_square_black_18dp.png" style="width:20px; height:20px" alt="Square" onclick="dispSquare()"><input type="image" src="img/ic_crop_16_9_black_18dp.png" style="width:20px; height:20px" alt="Wide" onclick="dispWide()"></div>
             <div id="log"></div>
-        </div>        
+        </div>
+        <br/>
         <div id="visualization"></div><br>
-        <div id="log"></div>
+        <div id="vlog"></div>
 
         <script src="libs/three.min.js"></script>        
         <script src="js/main.js"></script>        
