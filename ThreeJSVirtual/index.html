@@ -122,21 +122,26 @@ URL : https://github.com/NorikDavtian/ThreeJS-360-Panorama/blob/master/LICENSE
             id = "DryKitchen";
             timeline.addCustomTime(new Date(customDate.getFullYear(), customDate.getMonth(), customDate.getDate() - 3), id);
             timeline.setCustomTimeMarker('Dry Kitchen Progress', id, true);
-            timeline.focus(id)
-            timeline.on('select', onSelect);
+            timeline.on('select', function (properties) {
+                alert('selected items: ' + properties.items);
+            });
 
 
             timeline = new vis.Timeline(container, items, options);
             id = "MasterBedroom";
             timeline.addCustomTime(new Date(customDate.getFullYear(), customDate.getMonth(), customDate.getDate() - 5), id);
             timeline.setCustomTimeMarker('Master Bedroom Progress', id, true);
-            timeline.on('select', onSelect);
+            timeline.on('select', function (properties) {
+                alert('selected items: ' + properties.items);
+            });
 
             timeline = new vis.Timeline(container, items, options);
             id = "LivingRoom";
             timeline.addCustomTime(new Date(customDate.getFullYear(), customDate.getMonth(), customDate.getDate() - 6), id);
             timeline.setCustomTimeMarker('Living Room Progress', id, true);
-            timeline.on('select', onSelect);
+            timeline.on('select', function (properties) {
+                alert('selected items: ' + properties.items);
+            });
 
             function onSelect (properties) {
                 alert('selected items: ' + properties.items);
