@@ -117,7 +117,13 @@ URL : https://github.com/NorikDavtian/ThreeJS-360-Panorama/blob/master/LICENSE
 
         <script>
             var container = document.getElementById('visualization');
+            var items = new vis.DataSet([
+                { id: 1, content: "Dry Kitchen Progres", start: "2019-04-20" },
+                { id: 2, content: "Master Bedroom Progress", start: "2019-04-18" },
+                { id: 3, content: "Living Room Progress", start: "2019-04-10", type: "point" }
+            ]);
             var timeline = new vis.Timeline(container, items, options);
+            /*
             var id = "id";
             id = "DryKitchen";
             timeline.addCustomTime(new Date(customDate.getFullYear(), customDate.getMonth(), customDate.getDate() - 3), id);
@@ -141,16 +147,19 @@ URL : https://github.com/NorikDavtian/ThreeJS-360-Panorama/blob/master/LICENSE
             timeline.on("click", function (properties) {
                 alert('selected items: ' + properties.items);
             });
+            */
 
             function onSelect (properties) {
                 alert('selected items: ' + properties.items);
             }
 
+            /*
             document.getElementById('visualization').onclick = function (event) {
                 var props = timeline.getEventProperties(event)
                 alert(prop.items.toString());
                 //console.log(props);
             }
+            */
 
             function logEvent (event, properties) {
                 var log = document.getElementById('vlog');
