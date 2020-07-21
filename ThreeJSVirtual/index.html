@@ -119,6 +119,7 @@ URL : https://github.com/NorikDavtian/ThreeJS-360-Panorama/blob/master/LICENSE
             var container = document.getElementById('visualization');
             var timeline = new vis.Timeline(container, items, options);
             var id = "id";
+            id = "DryKitchen";
             timeline.addCustomTime(new Date(customDate.getFullYear(), customDate.getMonth(), customDate.getDate() - 3), id);
             timeline.setCustomTimeMarker('Dry Kitchen Progress', id, true);
             timeline.on("markerchange", function (properties) {
@@ -128,29 +129,27 @@ URL : https://github.com/NorikDavtian/ThreeJS-360-Panorama/blob/master/LICENSE
                 //logEvent("markerchanged", properties);
             });
 
-            var timeline2 = new vis.Timeline(container, items, options);
-            //var id = "id";
-            timeline2.addCustomTime(new Date(customDate.getFullYear(), customDate.getMonth(), customDate.getDate() - 5), id);
-            timeline2.setCustomTimeMarker('Master Bedroom Progress', id, true);
-            timeline2.on("markerchange", function (properties) {
+            id = "MasterBedroom";
+            timeline.addCustomTime(new Date(customDate.getFullYear(), customDate.getMonth(), customDate.getDate() - 5), id);
+            timeline.setCustomTimeMarker('Master Bedroom Progress', id, true);
+            timeline.on("markerchange", function (properties) {
                 //logEvent("markerchange", properties);
             });
-            timeline2.on("markerchanged", function (properties) {
+            timeline.on("markerchanged", function (properties) {
                 //logEvent("markerchanged", properties);
             });
 
-            var timeline3 = new vis.Timeline(container, items, options);
-            //var id = "id";
-            timeline3.addCustomTime(new Date(customDate.getFullYear(), customDate.getMonth(), customDate.getDate() - 6), id);
-            timeline3.setCustomTimeMarker('Living Room Progress', id, true);
-            timeline3.on("markerchange", function (properties) {
+            id = "LivingRoom";
+            timeline.addCustomTime(new Date(customDate.getFullYear(), customDate.getMonth(), customDate.getDate() - 6), id);
+            timeline.setCustomTimeMarker('Living Room Progress', id, true);
+            timeline.on("markerchange", function (properties) {
                 //logEvent("markerchange", properties);
             });
-            timeline3.on("markerchanged", function (properties) {
+            timeline.on("markerchanged", function (properties) {
                 //logEvent("markerchanged", properties);
             });
-            timeline3.on("click", function(properties){
-                alert('timeline 3 clicked');
+            timeline.on("click", function(properties){
+                alert(properties.toString());
             });
 
             function logEvent (event, properties) {
