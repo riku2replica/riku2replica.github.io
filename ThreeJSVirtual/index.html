@@ -146,24 +146,11 @@ URL : https://github.com/NorikDavtian/ThreeJS-360-Panorama/blob/master/LICENSE
                 alert('selected items: ' + properties.items);
             }
 
-            document.getElementById('DryKitchen').onclick = function (event) {
+            document.getElementById('visualization').onclick = function (event) {
                 var props = timeline.getEventProperties(event)
                 alert(prop.items.toString());
                 //console.log(props);
             }
-
-            document.getElementById('MasterBedroom').onclick = function (event) {
-                var props = timeline.getEventProperties(event)
-                //console.log(props);
-                alert(prop.items.toString());
-            }
-
-            document.getElementById('LivingRoom').onclick = function (event) {
-                var props = timeline.getEventProperties(event)
-                //console.log(props);
-                alert(prop.items.toString());
-            }
-
 
             function logEvent (event, properties) {
                 var log = document.getElementById('vlog');
