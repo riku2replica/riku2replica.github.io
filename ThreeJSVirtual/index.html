@@ -173,6 +173,15 @@ URL : https://github.com/NorikDavtian/ThreeJS-360-Panorama/blob/master/LICENSE
                 //console.log(props);
             }
             */
+            function prettyPrompt(title, text, inputValue, callback) {
+                swal({
+                title: title,
+                text: text,
+                type: 'input',
+                showCancelButton: true,
+                inputValue: inputValue
+                }, callback);
+            }
 
             function logEvent (event, properties) {
                 var log = document.getElementById('vlog');
