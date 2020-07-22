@@ -123,6 +123,7 @@ URL : https://github.com/NorikDavtian/ThreeJS-360-Panorama/blob/master/LICENSE
                 { id: 3, content: "Living Room Progress", start: "2019-04-10"}
             ]);
             var options = {
+                editable: true,
                 onSelect: function (item, callback) {
                     prettyPrompt('Add item', 'Enter text content for new item:', item.content, function (value) {
                         if (value) {
@@ -133,7 +134,20 @@ URL : https://github.com/NorikDavtian/ThreeJS-360-Panorama/blob/master/LICENSE
                         callback(null); // cancel item creation
                         }
                     });
+                    },
+                onUpdate: function (item, callback) {
+                    prettyPrompt('Update item', 'Edit items text:', item.content, function (value) {
+                        if (value) {
+                        item.content = value;
+                        callback(item); // send back adjusted item
+                        }
+                        else {
+                        callback(null); // cancel updating the item
+                        }
                     }
+                }
+      );
+    }
             };
             var timeline = new vis.Timeline(container, items, options);
             /*
