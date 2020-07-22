@@ -122,7 +122,19 @@ URL : https://github.com/NorikDavtian/ThreeJS-360-Panorama/blob/master/LICENSE
                 { id: 2, content: "Master Bedroom Progress", start: "2019-04-18" },
                 { id: 3, content: "Living Room Progress", start: "2019-04-10"}
             ]);
-            var options = {};
+            var options = {
+                onSelect: function (item, callback) {
+                    prettyPrompt('Add item', 'Enter text content for new item:', item.content, function (value) {
+                        if (value) {
+                        item.content = value;
+                        callback(item); // send back adjusted new item
+                        }
+                        else {
+                        callback(null); // cancel item creation
+                        }
+                    });
+                    }
+            };
             var timeline = new vis.Timeline(container, items, options);
             /*
             var id = "id";
