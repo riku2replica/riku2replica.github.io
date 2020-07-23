@@ -107,7 +107,7 @@ function render() {
     camera.lookAt(scene.position);
     renderer.render(scene, camera);
 }
-function mainCall()
+function chgImg(string)
 {
     alert("Main");
 }
@@ -146,4 +146,17 @@ function chgRes(iWidth, iHeight)
     ratio = width / height;
     renderer.setSize(width, height);
     camera.projectionMatrix.makePerspective(fov, ratio, 1, 1100);
+}
+function chgImg(item)
+{
+    /*
+    if(item != undefined)
+    {
+        
+    }
+    */
+   texture = THREE.ImageUtils.loadTexture('img/Demo/R0010035.JPG', new THREE.UVMapping(), function() {
+    init();
+    animate();
+});
 }
