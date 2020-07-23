@@ -156,5 +156,7 @@ function chgImg(item)
     }
     */
    texture.sourceFile = 'img/Demo/R0010035.JPG';
-   onWindowResized(null);
+   init();
+   animate();
+   //onWindowResized(null);
 }
