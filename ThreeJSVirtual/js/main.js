@@ -5,6 +5,7 @@ URL : https://github.com/NorikDavtian/ThreeJS-360-Panorama/blob/master/LICENSE
 */
 "use strict";
 var camera,
+    mesh,
         scene,
         element = document.getElementById('demo'), // Inject scene into this
         renderer,
@@ -32,7 +33,7 @@ var texture = THREE.ImageUtils.loadTexture('img/TestImg.JPG', new THREE.UVMappin
 function init() {
     camera = new THREE.PerspectiveCamera(fov, ratio, 1, 1000);
     scene = new THREE.Scene();
-    var mesh = new THREE.Mesh(new THREE.SphereGeometry(500, 60, 40), new THREE.MeshBasicMaterial({map: texture}));
+    mesh = new THREE.Mesh(new THREE.SphereGeometry(500, 60, 40), new THREE.MeshBasicMaterial({map: texture}));
     mesh.scale.x = -1;
     scene.add(mesh);
     renderer = new THREE.WebGLRenderer({antialias: true});
@@ -155,8 +156,10 @@ function chgImg(item)
         
     }
     */
-   texture.sourceFile = 'img/Demo/R0010035.JPG';
-   init();
-   animate();
+   var newSrc = 'img/Demo/R0010035.JPG';
+   mesh.material.map = THREE.ImageUtils.loadTexture(newSrc);
+   mesh.material.needsUpdate = true;
+   //init();
+   //animate();
    //onWindowResized(null);
 }
