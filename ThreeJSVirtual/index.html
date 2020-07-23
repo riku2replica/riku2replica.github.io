@@ -131,7 +131,8 @@ URL : https://github.com/NorikDavtian/ThreeJS-360-Panorama/blob/master/LICENSE
             var timeline = new vis.Timeline(container, items, options);
             timeline.on("select", function (properties) {
                 //alert('selected items: ' + properties.event.firstTarget.innerText.toString());
-                chgImg('1');
+                chgImg(properties.event.firstTarget.innerText.toString());
+                //chgImg('1');
             });
         
              function dispSquare()
