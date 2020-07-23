@@ -155,8 +155,6 @@ function chgImg(item)
         
     }
     */
-   texture = THREE.ImageUtils.loadTexture('img/Demo/R0010035.JPG', new THREE.UVMapping(), function() {
-    init();
-    animate();
-});
+   texture.sourceFile = 'img/Demo/R0010035.JPG';
+   onWindowResized(null);
 }
