@@ -150,16 +150,91 @@ function chgRes(iWidth, iHeight)
 }
 function chgImg(item)
 {
-    /*
+    var newSrc = '';
     if(item != undefined)
-    {
-        
+    {   
+        switch(item)
+        {
+            case 'Dry Kitchen Progress':
+                newSrc = 'img/Demo/R0010036.JPG';
+                break;
+            case 'Master Bedroom Progress':
+                newSrc = 'img/Demo/R0010048.JPG';
+                break;
+            case 'Living Room Progress':
+                newSrc = 'img/Demo/R0010035.JPG';
+                break;
+            default:
+                newSrc = randomImg();
+                break;
+        }
+        mesh.material.map = THREE.ImageUtils.loadTexture(newSrc);
+        mesh.material.needsUpdate = true;
     }
-    */
-   var newSrc = 'img/Demo/R0010035.JPG';
-   mesh.material.map = THREE.ImageUtils.loadTexture(newSrc);
-   mesh.material.needsUpdate = true;
+   
    //init();
    //animate();
    //onWindowResized(null);
+}
+
+function randomImg()
+{
+    var rNum = Math.round(Math.random() * 17);
+    var rImg = '';
+    switch(rNum)
+    {
+        case 1:
+            rImg = 'img/Demo/R0010035.JPG';
+            break;
+        case 2:
+            rImg = 'img/Demo/R0010036.JPG';
+            break;
+        case 3:
+            rImg = 'img/Demo/R0010037.JPG';
+            break;
+        case 4:
+            rImg = 'img/Demo/R0010038.JPG';
+            break;
+        case 5:
+            rImg = 'img/Demo/R0010039.JPG';
+            break;
+        case 6:
+            rImg = 'img/Demo/R0010040.JPG';
+            break;
+        case 7:
+            rImg = 'img/Demo/R0010042.JPG';
+            break;
+        case 8:
+            rImg = 'img/Demo/R0010043.JPG';
+            break;
+        case 9:
+            rImg = 'img/Demo/R0010044.JPG';
+            break;
+        case 10:
+            rImg = 'img/Demo/R0010045.JPG';
+            break;
+        case 11:
+            rImg = 'img/Demo/R0010046.JPG';
+            break;
+        case 12:
+            rImg = 'img/Demo/R0010047.JPG';
+            break;
+        case 13:
+            rImg = 'img/Demo/R0010048.JPG';
+            break;
+        case 14:
+            rImg = 'img/Demo/R0010049.JPG';
+            break;
+        case 15:
+            rImg = 'img/Demo/R0010050.JPG';
+            break;
+        case 16:
+            rImg = 'img/Demo/R0010051.JPG';
+            break;
+        case 17:
+        default:
+            rImg = 'img/Demo/R0010052.JPG';
+            break;
+    }
+    return rImg;
 }
