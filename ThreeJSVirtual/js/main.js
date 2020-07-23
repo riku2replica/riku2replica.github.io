@@ -26,7 +26,8 @@ var camera,
         width = 1024, // int || window.innerWidth || default 4:3
         height = 768, // int || window.innerHeight || default 4:3
         ratio = width / height;
-var texture = THREE.ImageUtils.loadTexture('img/TestImg.JPG', new THREE.UVMapping(), function() {
+var defSrc = randomImg();   //'img/TestImg.JPG'
+var texture = THREE.ImageUtils.loadTexture(defSrc, new THREE.UVMapping(), function() {
     init();
     animate();
 });
